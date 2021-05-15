@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+	<gather class="com.briup.smart.env.client.GatherImpl">
+		<data-file-path>src/main/resources/data-file-simple</data-file-path>
+	</gather>
+	
+	<logger class="com.briup.smart.env.util.LogImpl">
+	</logger>
+	
+	<backup class="com.briup.smart.env.util.BackupImpl">
+		
+		<backFileName>src/main/resources/backup.txt</backFileName>
+		<fileLengthName>src/main/resources/fileLength.txt</fileLengthName>
+	</backup>
+	 
+	<client class="com.briup.smart.env.client.GatherImplClient">
+		<host>127.0.0.1</host>
+		<port>9999</port>
+	</client>
+	
+	<server class="com.briup.smart.env.server.GatherImplServer">
+		<server-port>9999</server-port>
+	</server>
+	
+	
+	<dbStore class="com.briup.smart.env.server.GatherImplDBStore">
+		<batchNum>2000</batchNum>
+		<driver></driver>
+		<url></url>
+		<username></username>
+		<password></password>
+	</dbStore>
+
+</environment>
